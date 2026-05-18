@@ -67,7 +67,7 @@ The system processes multi-modal MRI scans from the BraTS (Brain Tumor Segmentat
 
 ## 🏗️ Pipeline
 
-MedVisVR connects seven modular components in a single data flow — from raw medical scan to immersive VR rendering. The pipeline branches after segmentation: the original MRI volume is rendered as a 3D field, while the tumor masks are processed as a separate overlay. Both streams are composited in Unity for the final VR scene.
+MedVisVR is designed as a modular workflow — from raw medical scan to immersive VR. Each component is decoupled and replaceable; the deterministic preprocessing and segmentation layers remain valid even when the downstream visualization backend changes. The pipeline branches after mask validation: anatomical localization and clinical Q&A are processed in parallel, then merged into a single hybrid report before being delivered to XR.
 
 <div align="center">
 
@@ -76,13 +76,13 @@ MedVisVR connects seven modular components in a single data flow — from raw me
 </div>
 
 <table>
-  <tr><td><strong>01 · Input</strong></td><td>Multi-modal MRI volumes in NIfTI or DICOM format. Default dataset is BraTS2020 (T1, T1ce, T2, FLAIR).</td></tr>
-  <tr><td><strong>02 · Preprocessing</strong></td><td>MONAI-based pipeline: RAS orientation, 1mm³ resampling, intensity normalization, 128³ patch cropping.</td></tr>
-  <tr><td><strong>03 · Segmentation</strong></td><td>nnU-Net inference produces enhancing tumor (ET), peritumoral edema, and necrotic core (NCR) masks.</td></tr>
-  <tr><td><strong>04 · Volume Rendering</strong></td><td>GPU ray-marching renders the raw MRI volume with a tunable transfer function and intensity LUT.</td></tr>
-  <tr><td><strong>05 · Mask Overlay</strong></td><td>Tumor masks are converted to color-coded mesh layers, one per sub-region.</td></tr>
-  <tr><td><strong>06 · Unity Scene</strong></td><td>The volume and overlays are composited in Unity 6 (URP) with the Meta XR SDK.</td></tr>
-  <tr><td><strong>07 · XR Output</strong></td><td>The final interactive scene is delivered to Meta Quest 3 for immersive exploration.</td></tr>
+  <tr><td><strong>01 · Girdi</strong></td><td>Multi-modal MRI volumes in NIfTI or DICOM format. Default dataset is BraTS2020 (T1, T1ce, T2, FLAIR).</td></tr>
+  <tr><td><strong>02 · Segmentasyon</strong></td><td>nnU-Net (PyTorch) inference. Trained for brain, liver, and lung anatomies — BraTS protocol applied to brain MRI.</td></tr>
+  <tr><td><strong>03 · Maske doğrulama</strong></td><td>Mask quality check. Low-confidence outputs are <em>rejected</em>; ambiguous regions are <em>hedged</em> in the downstream report.</td></tr>
+  <tr><td><strong>04 · Anatomik lokalizasyon</strong></td><td>Anatomical mapping via Harvard-Oxford atlas (brain), Couinaud segments (liver), and lobar mapping (lung).</td></tr>
+  <tr><td><strong>05 · Klinik Q&amp;A</strong></td><td>Context-locked clinical question answering powered by Qwen2.5-7B running locally through llama.cpp.</td></tr>
+  <tr><td><strong>06 · Rapor</strong></td><td>Hybrid structured report combining deterministic findings with natural-language summaries.</td></tr>
+  <tr><td><strong>07 · XR çıktı</strong></td><td>Final output delivered as an interactive VR / AR scene on Meta Quest 3.</td></tr>
 </table>
 
 ---
@@ -92,11 +92,15 @@ MedVisVR connects seven modular components in a single data flow — from raw me
 <table>
   <tr>
     <td><strong>AI / Deep Learning</strong></td>
-    <td>Python 3.8+ · PyTorch · MONAI · NumPy</td>
+    <td>Python 3.8+ · PyTorch · MONAI · NumPy · nnU-Net</td>
   </tr>
   <tr>
     <td><strong>Medical Imaging</strong></td>
-    <td>Nibabel · NIfTI · DICOM</td>
+    <td>Nibabel · NIfTI · DICOM · Harvard-Oxford Atlas</td>
+  </tr>
+  <tr>
+    <td><strong>Language Models</strong></td>
+    <td>Qwen2.5-7B · llama.cpp · GGUF (q4_k_m)</td>
   </tr>
   <tr>
     <td><strong>VR &amp; Rendering</strong></td>
