@@ -71,7 +71,7 @@ MedVisVR is designed as a modular workflow — from raw medical scan to immersiv
 
 <div align="center">
 
-<img src="docs/pipeline.svg" alt="MedVisVR Pipeline" width="100%"/>
+<img src="https://raw.githubusercontent.com/CankayaUniversity/ceng-407-408-2025-2026-MedVisVR/documents/pipeline.svg" alt="MedVisVR Pipeline" width="100%"/>
 
 </div>
 
