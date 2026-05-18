@@ -1,12 +1,12 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1976d2,50:7b1fa2,100:c2185b&height=260&section=header&text=MedVisVR&fontSize=80&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Medical%20Visualization%20in%20Virtual%20Reality&descAlignY=58&descSize=18" alt="MedVisVR Banner" width="100%"/>
+
 <div align="center">
 
-<img src="https://private-user-images.githubusercontent.com/115018936/520385728-110dd15e-0a21-4cbe-a9b9-46f5ccebe5b9.jpg" alt="MedVisVR Logo" width="620"/>
+<img src="https://private-user-images.githubusercontent.com/115018936/520385728-110dd15e-0a21-4cbe-a9b9-46f5ccebe5b9.jpg" alt="MedVisVR Logo" width="520"/>
 
-# MedVisVR
+### 🧠 Brain Tumor Segmentation · Multi-Modal MRI · Immersive VR
 
-### 🧠 Medical Visualization in Virtual Reality for Brain Tumor Segmentation
-
-*An immersive VR platform for exploring multi-modal MRI scans and tumor segmentation in 3D*
+*An advanced VR platform for exploring brain tumor segmentation data in 3D*
 
 <br/>
 
@@ -339,3 +339,5 @@ If you use this project in your research, please cite:
 <sub>Çankaya University · Department of Computer Engineering · 2025–2026</sub>
 
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:c2185b,50:7b1fa2,100:1976d2&height=120&section=footer" alt="Footer" width="100%"/>
