@@ -23,7 +23,7 @@
 
 <br/>
 
-**[Features](#-key-features)** · **[Architecture](#%EF%B8%8F-architecture)** · **[Installation](#-installation)** · **[Usage](#-usage)** · **[Team](#-development-team)** · **[Docs](#-documentation)**
+**[Features](#-key-features)** · **[Pipeline](#%EF%B8%8F-pipeline)** · **[Installation](#-installation)** · **[Usage](#-usage)** · **[Team](#-development-team)** · **[Docs](#-documentation)**
 
 </div>
 
@@ -65,23 +65,25 @@ The system processes multi-modal MRI scans from the BraTS (Brain Tumor Segmentat
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Pipeline
 
-```mermaid
-flowchart LR
-    A[BraTS2020<br/>Multi-modal MRI] --> B[MONAI<br/>Preprocessing]
-    B --> C[Segmentation<br/>Model]
-    C --> D[Volume<br/>Ray-Marching]
-    D --> E[Unity VR<br/>Renderer]
-    E --> F[🥽 Meta Quest<br/>Headset]
+MedVisVR connects seven modular components in a single data flow — from raw medical scan to immersive VR rendering. The pipeline branches after segmentation: the original MRI volume is rendered as a 3D field, while the tumor masks are processed as a separate overlay. Both streams are composited in Unity for the final VR scene.
 
-    style A fill:#e3f2fd,stroke:#1976d2,color:#000
-    style B fill:#e8f5e9,stroke:#388e3c,color:#000
-    style C fill:#fff3e0,stroke:#f57c00,color:#000
-    style D fill:#fce4ec,stroke:#c2185b,color:#000
-    style E fill:#f3e5f5,stroke:#7b1fa2,color:#000
-    style F fill:#ede7f6,stroke:#512da8,color:#000
-```
+<div align="center">
+
+<img src="docs/pipeline.svg" alt="MedVisVR Pipeline" width="100%"/>
+
+</div>
+
+<table>
+  <tr><td><strong>01 · Input</strong></td><td>Multi-modal MRI volumes in NIfTI or DICOM format. Default dataset is BraTS2020 (T1, T1ce, T2, FLAIR).</td></tr>
+  <tr><td><strong>02 · Preprocessing</strong></td><td>MONAI-based pipeline: RAS orientation, 1mm³ resampling, intensity normalization, 128³ patch cropping.</td></tr>
+  <tr><td><strong>03 · Segmentation</strong></td><td>nnU-Net inference produces enhancing tumor (ET), peritumoral edema, and necrotic core (NCR) masks.</td></tr>
+  <tr><td><strong>04 · Volume Rendering</strong></td><td>GPU ray-marching renders the raw MRI volume with a tunable transfer function and intensity LUT.</td></tr>
+  <tr><td><strong>05 · Mask Overlay</strong></td><td>Tumor masks are converted to color-coded mesh layers, one per sub-region.</td></tr>
+  <tr><td><strong>06 · Unity Scene</strong></td><td>The volume and overlays are composited in Unity 6 (URP) with the Meta XR SDK.</td></tr>
+  <tr><td><strong>07 · XR Output</strong></td><td>The final interactive scene is delivered to Meta Quest 3 for immersive exploration.</td></tr>
+</table>
 
 ---
 
@@ -244,7 +246,7 @@ MedVisVR/
 ├── models/                # Trained model weights
 ├── config/                # Configuration files
 ├── tests/                 # Unit and integration tests
-└── docs/                  # Additional documentation
+└── docs/                  # Additional documentation (incl. pipeline.svg)
 ```
 
 ---
