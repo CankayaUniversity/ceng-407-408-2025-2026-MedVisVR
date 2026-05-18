@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 580" preserveAspectRatio="xMidYMid meet" width="100%">
+  <defs>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="softglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.2"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="580" fill="#0a0f1e" rx="12"/>
+
+  <!-- ===== Connection lines ===== -->
+  <g stroke="#5eead4" stroke-width="1.5" fill="none" stroke-linecap="round" filter="url(#softglow)">
+    <!-- Girdi -> Segmentasyon -->
+    <line x1="200" y1="300" x2="240" y2="300"/>
+    <!-- Segmentasyon -> Maske doğrulama -->
+    <line x1="460" y1="300" x2="500" y2="300"/>
+    <!-- Maske doğrulama -> Anatomik lokalizasyon (branch up) -->
+    <line x1="680" y1="300" x2="720" y2="140"/>
+    <!-- Maske doğrulama -> Klinik Q&A (branch down) -->
+    <line x1="680" y1="300" x2="720" y2="440"/>
+    <!-- Anatomik lokalizasyon -> Rapor (merge) -->
+    <line x1="970" y1="140" x2="1010" y2="300"/>
+    <!-- Klinik Q&A -> Rapor (merge) -->
+    <line x1="970" y1="440" x2="1010" y2="300"/>
+    <!-- Rapor -> XR çıktı -->
+    <line x1="1200" y1="300" x2="1240" y2="300"/>
+  </g>
+
+  <!-- ===== Flowing particles ===== -->
+  <g fill="#5eead4" filter="url(#glow)">
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite"/>
+      <animateMotion dur="5s" repeatCount="indefinite" path="M 200 300 L 240 300"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="0.6s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="0.6s" path="M 460 300 L 500 300"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="1.2s" path="M 680 300 L 720 140"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="1.2s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="1.2s" path="M 680 300 L 720 440"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="2.4s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="2.4s" path="M 970 140 L 1010 300"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="2.4s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="2.4s" path="M 970 440 L 1010 300"/>
+    </circle>
+    <circle r="3.5">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite" begin="3.2s"/>
+      <animateMotion dur="5s" repeatCount="indefinite" begin="3.2s" path="M 1200 300 L 1240 300"/>
+    </circle>
+  </g>
+
+  <!-- ===== Connection dots ===== -->
+  <g fill="#5eead4">
+    <circle cx="200" cy="300" r="5"/>
+    <circle cx="240" cy="300" r="5"/>
+    <circle cx="460" cy="300" r="5"/>
+    <circle cx="500" cy="300" r="5"/>
+    <circle cx="680" cy="300" r="5.5">
+      <animate attributeName="r" values="5.5;7.5;5.5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="140" r="5"/>
+    <circle cx="720" cy="440" r="5"/>
+    <circle cx="970" cy="140" r="5"/>
+    <circle cx="970" cy="440" r="5"/>
+    <circle cx="1010" cy="300" r="5.5">
+      <animate attributeName="r" values="5.5;7.5;5.5" dur="2.5s" repeatCount="indefinite" begin="1.25s"/>
+    </circle>
+    <circle cx="1200" cy="300" r="5"/>
+    <circle cx="1240" cy="300" r="5"/>
+  </g>
+
+  <!-- ===== Nodes ===== -->
+
+  <!-- Node 1: Girdi -->
+  <g>
+    <rect x="40" y="260" width="160" height="80" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="120" y="296" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Girdi</text>
+    <text x="120" y="320" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">NIfTI / DICOM</text>
+  </g>
+
+  <!-- Node 2: Segmentasyon -->
+  <g>
+    <rect x="240" y="240" width="220" height="120" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="350" y="280" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Segmentasyon</text>
+    <text x="350" y="308" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">nnU-Net (PyTorch)</text>
+    <text x="350" y="330" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Beyin · Karaciğer · Akciğer</text>
+  </g>
+
+  <!-- Node 3: Maske doğrulama -->
+  <g>
+    <rect x="500" y="260" width="180" height="80" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="590" y="296" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Maske doğrulama</text>
+    <text x="590" y="320" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Reject · Hedge</text>
+  </g>
+
+  <!-- Node 4: Anatomik lokalizasyon (top branch) -->
+  <g>
+    <rect x="720" y="80" width="250" height="120" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="845" y="120" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Anatomik lokalizasyon</text>
+    <text x="845" y="148" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Harvard-Oxford</text>
+    <text x="845" y="170" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Couinaud · Lob</text>
+  </g>
+
+  <!-- Node 5: Klinik Q&A (bottom branch) -->
+  <g>
+    <rect x="720" y="380" width="250" height="120" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="845" y="420" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Klinik Q&amp;A</text>
+    <text x="845" y="448" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Qwen2.5-7B (llama.cpp)</text>
+    <text x="845" y="470" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Bağlam-kilitli yanıtlama</text>
+  </g>
+
+  <!-- Node 6: Rapor -->
+  <g>
+    <rect x="1010" y="260" width="190" height="80" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="1105" y="296" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">Rapor</text>
+    <text x="1105" y="320" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">Hibrit yapılandırılmış</text>
+  </g>
+
+  <!-- Node 7: XR çıktı -->
+  <g>
+    <rect x="1240" y="260" width="160" height="80" rx="6" fill="#0a0f1e" stroke="#525866" stroke-width="1"/>
+    <text x="1320" y="296" text-anchor="middle" fill="#ffffff" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="18" font-weight="600">XR çıktı</text>
+    <text x="1320" y="320" text-anchor="middle" fill="#94a3b8" font-family="-apple-system,Segoe UI,system-ui,sans-serif" font-size="13">VR / AR</text>
+  </g>
+</svg>
