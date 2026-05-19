@@ -71,7 +71,7 @@ Carvis is designed as a modular workflow — from raw medical scan to immersive 
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/CankayaUniversity/ceng-407-408-2025-2026-MedVisVR/documents/pipeline.svg" alt="Carvis Pipeline" width="100%"/>
+<img src="https://raw.githubusercontent.com/CankayaUniversity/ceng-407-408-2025-2026-MedVisVR/Documents/pipeline.svg" alt="Carvis Pipeline" width="100%"/>
 
 </div>
 
