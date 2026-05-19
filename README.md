@@ -76,13 +76,13 @@ MedVisVR is designed as a modular workflow — from raw medical scan to immersiv
 </div>
 
 <table>
-  <tr><td><strong>01 · Girdi</strong></td><td>Multi-modal MRI volumes in NIfTI or DICOM format. Default dataset is BraTS2020 (T1, T1ce, T2, FLAIR).</td></tr>
-  <tr><td><strong>02 · Segmentasyon</strong></td><td>nnU-Net (PyTorch) inference. Trained for brain, liver, and lung anatomies — BraTS protocol applied to brain MRI.</td></tr>
-  <tr><td><strong>03 · Maske doğrulama</strong></td><td>Mask quality check. Low-confidence outputs are <em>rejected</em>; ambiguous regions are <em>hedged</em> in the downstream report.</td></tr>
-  <tr><td><strong>04 · Anatomik lokalizasyon</strong></td><td>Anatomical mapping via Harvard-Oxford atlas (brain), Couinaud segments (liver), and lobar mapping (lung).</td></tr>
-  <tr><td><strong>05 · Klinik Q&amp;A</strong></td><td>Context-locked clinical question answering powered by Qwen2.5-7B running locally through llama.cpp.</td></tr>
-  <tr><td><strong>06 · Rapor</strong></td><td>Hybrid structured report combining deterministic findings with natural-language summaries.</td></tr>
-  <tr><td><strong>07 · XR çıktı</strong></td><td>Final output delivered as an interactive VR / AR scene on Meta Quest 3.</td></tr>
+  <tr><td><strong>01 · Input</strong></td><td>Multi-modal MRI volumes in NIfTI or DICOM format. Default dataset is BraTS2020 (T1, T1ce, T2, FLAIR).</td></tr>
+  <tr><td><strong>02 · Segmentation</strong></td><td>nnU-Net (PyTorch) inference. Trained for brain, liver, and lung anatomies; BraTS protocol applied to brain MRI.</td></tr>
+  <tr><td><strong>03 · Mask Validation</strong></td><td>Mask quality check. Low-confidence outputs are <em>rejected</em>; ambiguous regions are <em>hedged</em> in the downstream report.</td></tr>
+  <tr><td><strong>04 · Anatomical Localization</strong></td><td>Anatomical mapping via Harvard-Oxford atlas (brain), Couinaud segments (liver), and lobar mapping (lung).</td></tr>
+  <tr><td><strong>05 · Clinical Q&amp;A</strong></td><td>Context-locked clinical question answering powered by Qwen2.5-7B running locally through llama.cpp.</td></tr>
+  <tr><td><strong>06 · Report</strong></td><td>Hybrid structured report combining deterministic findings with natural-language summaries.</td></tr>
+  <tr><td><strong>07 · XR Output</strong></td><td>Final output delivered as an interactive VR / AR scene on Meta Quest 3.</td></tr>
 </table>
 
 ---
