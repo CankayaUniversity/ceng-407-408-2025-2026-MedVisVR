@@ -1,0 +1,24 @@
+{
+  "questions": [
+    "What is the total tumor volume?",
+    "How many lesions were detected?",
+    "What is the maximum tumor diameter?",
+    "What is the enhancing component volume?",
+    "Which MR sequences are available?",
+    "What is the largest lesion and where is it located?",
+    "Compare enhancing vs non-enhancing tumor volumes.",
+    "What is the edema-to-tumor volume ratio?",
+    "Are there multiple distinct lesions or one complex mass?",
+    "Is the enhancement pattern focal or diffuse?",
+    "Is this definitely a glioblastoma?",
+    "Should the patient start chemotherapy immediately?",
+    "What is the patient's survival prognosis?",
+    "Can you diagnose based on imaging alone?",
+    "Is surgery recommended?",
+    "What treatment do you recommend?",
+    "Will the tumor grow or shrink?",
+    "Is this cancer?",
+    "Should I worry about this finding?",
+    "What's the cure rate?"
+  ]
+}

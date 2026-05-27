@@ -1,0 +1,253 @@
+{
+  "version": "1.0",
+  "description": "Brain MRI QA benchmark — 60 questions covering all intent classes",
+  "default_case_id": "BraTS20_Validation_001",
+  "questions": [
+
+    {"id": 1, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "total_volume",
+     "question": "What is the total tumor volume?",
+     "expected_keywords": ["cm3", "mm3", "volume"], "must_not_contain": ["I don't know", "insufficient"]},
+
+    {"id": 2, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "enhancing_volume",
+     "question": "What is the enhancing tumor volume?",
+     "expected_keywords": ["enhancing", "cm3"], "must_not_contain": []},
+
+    {"id": 3, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "edema_volume",
+     "question": "What is the edema volume?",
+     "expected_keywords": ["edema", "cm3", "mm3"], "must_not_contain": []},
+
+    {"id": 4, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "lesion_count",
+     "question": "How many lesions were detected?",
+     "expected_keywords": ["lesion"], "must_not_contain": []},
+
+    {"id": 5, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "max_diameter",
+     "question": "What is the maximum tumor diameter?",
+     "expected_keywords": ["mm", "diameter"], "must_not_contain": []},
+
+    {"id": 6, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "total_volume",
+     "question": "How big is the tumor?",
+     "expected_keywords": ["cm3", "mm3"], "must_not_contain": []},
+
+    {"id": 7, "category": "volumetric", "expected_intent": "quantitative", "expected_subtype": "lesion_count",
+     "question": "How many components are in the segmentation?",
+     "expected_keywords": ["component", "lesion"], "must_not_contain": []},
+
+    {"id": 8, "category": "volumetric", "expected_intent": "quantitative",
+     "question": "What is the necrotic core volume?",
+     "expected_keywords": ["necrotic", "mm3", "cm3"], "must_not_contain": []},
+
+    {"id": 9, "category": "localization", "expected_intent": "localization",
+     "question": "Where is the tumor located?",
+     "expected_keywords": ["lobe", "left", "right"], "must_not_contain": []},
+
+    {"id": 10, "category": "localization", "expected_intent": "localization",
+     "question": "Which lobe is involved?",
+     "expected_keywords": ["lobe"], "must_not_contain": []},
+
+    {"id": 11, "category": "localization", "expected_intent": "localization",
+     "question": "Is the tumor in the left or right hemisphere?",
+     "expected_keywords": ["left", "right", "hemisphere"], "must_not_contain": []},
+
+    {"id": 12, "category": "localization", "expected_intent": "localization",
+     "question": "What is the atlas-supported localization?",
+     "expected_keywords": ["atlas", "lobe"], "must_not_contain": []},
+
+    {"id": 13, "category": "localization", "expected_intent": "localization",
+     "question": "What is the largest lesion and where is it located?",
+     "expected_keywords": ["lobe", "mm3"], "must_not_contain": []},
+
+    {"id": 14, "category": "localization", "expected_intent": "localization",
+     "question": "How deep is the tumor from the cortical surface?",
+     "expected_keywords": ["deep", "subcortical", "cortical", "mm"], "must_not_contain": []},
+
+    {"id": 15, "category": "localization", "expected_intent": "localization",
+     "question": "What is the ventricular relation of the tumor?",
+     "expected_keywords": ["ventricular", "remote", "near", "periventricular"], "must_not_contain": []},
+
+    {"id": 16, "category": "mass_effect", "expected_intent": "mass_effect", "expected_subtype": "midline_shift",
+     "question": "What is the midline shift?",
+     "expected_keywords": ["mm", "midline"], "must_not_contain": [],
+     "expected_implication_tier": ["caution", "warning", "critical", "high_risk"]},
+
+    {"id": 17, "category": "mass_effect", "expected_intent": "mass_effect",
+     "question": "Is there midline shift?",
+     "expected_keywords": ["mm", "midline"], "must_not_contain": []},
+
+    {"id": 18, "category": "mass_effect", "expected_intent": "mass_effect", "expected_subtype": "ventricular_compression",
+     "question": "Is there ventricular compression?",
+     "expected_keywords": ["ventricular", "compression", "present", "absent", "true", "false"], "must_not_contain": []},
+
+    {"id": 19, "category": "mass_effect", "expected_intent": "mass_effect", "expected_subtype": "sulcal_effacement",
+     "question": "Is there sulcal effacement?",
+     "expected_keywords": ["sulcal", "effacement"], "must_not_contain": []},
+
+    {"id": 20, "category": "mass_effect", "expected_intent": "mass_effect",
+     "question": "Is there cisternal obliteration?",
+     "expected_keywords": ["cisternal", "obliteration", "effacement"], "must_not_contain": []},
+
+    {"id": 21, "category": "mass_effect", "expected_intent": "mass_effect",
+     "question": "What is the herniation risk tier?",
+     "expected_keywords": ["herniation", "tier", "critical", "caution", "risk"], "must_not_contain": [],
+     "expected_implication_tier": ["caution", "warning", "critical", "high_risk"]},
+
+    {"id": 22, "category": "critical_proximity", "expected_intent": "critical_proximity",
+     "question": "How close is the tumor to the motor cortex?",
+     "expected_keywords": ["motor", "cortex", "mm"], "must_not_contain": []},
+
+    {"id": 23, "category": "critical_proximity", "expected_intent": "critical_proximity",
+     "question": "How close is the tumor to the brainstem?",
+     "expected_keywords": ["brainstem", "mm"], "must_not_contain": []},
+
+    {"id": 24, "category": "critical_proximity", "expected_intent": "critical_proximity",
+     "question": "Is the tumor near any eloquent cortex?",
+     "expected_keywords": ["motor", "cortex", "eloquent", "mm"], "must_not_contain": []},
+
+    {"id": 25, "category": "critical_proximity", "expected_intent": "critical_proximity",
+     "question": "Is this surgically significant given the motor cortex distance?",
+     "expected_keywords": ["motor", "mm"], "must_not_contain": []},
+
+    {"id": 26, "category": "comparison", "expected_intent": "comparison", "expected_subtype": "enhancing_vs_nonenhancing",
+     "question": "Compare enhancing vs non-enhancing tumor volumes.",
+     "expected_keywords": ["enhancing", "non-enhancing", "cm3"], "must_not_contain": []},
+
+    {"id": 27, "category": "comparison", "expected_intent": "comparison", "expected_subtype": "multiplicity",
+     "question": "Is this multifocal disease or a single dominant process?",
+     "expected_keywords": ["lesion", "multifocal", "dominant"], "must_not_contain": []},
+
+    {"id": 28, "category": "comparison", "expected_intent": "quantitative",
+     "question": "What is the edema to tumor volume ratio?",
+     "expected_keywords": ["ratio", "edema"], "must_not_contain": []},
+
+    {"id": 29, "category": "comparison", "expected_intent": "comparison",
+     "question": "Which component has the largest volume?",
+     "expected_keywords": ["component", "volume", "mm3"], "must_not_contain": []},
+
+    {"id": 30, "category": "bt_rads", "expected_intent": "structured_reporting",
+     "question": "Generate a BT-RADS structured report",
+     "expected_keywords": ["volume", "location", "lesion"], "must_not_contain": []},
+
+    {"id": 31, "category": "bt_rads", "expected_intent": "structured_reporting",
+     "question": "Give me a structured imaging summary",
+     "expected_keywords": ["volume", "location"], "must_not_contain": []},
+
+    {"id": 32, "category": "bt_rads", "expected_intent": "structured_reporting",
+     "question": "What is the dominant lesion component?",
+     "expected_keywords": ["component", "lesion", "dominant"], "must_not_contain": []},
+
+    {"id": 33, "category": "summary", "expected_intent": "summary",
+     "question": "Give me a summary of this case.",
+     "expected_keywords": ["tumor", "volume", "lesion"], "must_not_contain": []},
+
+    {"id": 34, "category": "summary", "expected_intent": "summary",
+     "question": "Summarize the imaging findings in natural language.",
+     "expected_keywords": ["tumor", "volume", "location"], "must_not_contain": []},
+
+    {"id": 35, "category": "summary", "expected_intent": "summary",
+     "question": "Write a short narrative explanation of this case for tumor board discussion.",
+     "expected_keywords": ["tumor", "volume"], "must_not_contain": []},
+
+    {"id": 36, "category": "summary", "expected_intent": "summary",
+     "question": "What are the top limitations of this case-level analysis?",
+     "expected_keywords": ["limitation", "automated", "histopathological"], "must_not_contain": []},
+
+    {"id": 37, "category": "summary", "expected_intent": "summary",
+     "question": "Which MR sequences are available?",
+     "expected_keywords": ["FLAIR", "T1", "T2"], "must_not_contain": []},
+
+    {"id": 38, "category": "differential", "expected_intent": "diagnosis/differential",
+     "question": "What are the key differential diagnoses?",
+     "expected_keywords": ["glioma", "diagnosis", "differential"], "must_not_contain": []},
+
+    {"id": 39, "category": "differential", "expected_intent": "diagnosis/differential",
+     "question": "Is this consistent with glioblastoma?",
+     "expected_keywords": ["glioblastoma", "imaging", "diagnosis"], "must_not_contain": []},
+
+    {"id": 40, "category": "differential", "expected_intent": "diagnosis/differential",
+     "question": "What could this lesion pattern represent?",
+     "expected_keywords": ["glioma", "lesion", "pattern"], "must_not_contain": []},
+
+    {"id": 41, "category": "management", "expected_intent": "management/prognosis",
+     "question": "What are the surgical planning considerations?",
+     "expected_keywords": ["surgical", "planning", "resection", "motor"], "must_not_contain": []},
+
+    {"id": 42, "category": "management", "expected_intent": "management/prognosis",
+     "question": "What is the prognosis?",
+     "expected_keywords": ["prognosis", "imaging", "histopathological"], "must_not_contain": []},
+
+    {"id": 43, "category": "management", "expected_intent": "management/prognosis",
+     "question": "What treatment options should be considered?",
+     "expected_keywords": ["treatment", "resection", "clinical"], "must_not_contain": []},
+
+    {"id": 44, "category": "management", "expected_intent": "management/prognosis",
+     "question": "Is surgical resection recommended based on this imaging?",
+     "expected_keywords": ["surgical", "imaging", "decision"], "must_not_contain": []},
+
+    {"id": 45, "category": "session_memory", "expected_intent": "localization",
+     "question": "Where is the tumor located?",
+     "follow_up": "Which specific cortical regions overlap with it?",
+     "expected_keywords": ["region", "lobe", "atlas"], "must_not_contain": []},
+
+    {"id": 46, "category": "session_memory", "expected_intent": "mass_effect",
+     "question": "What is the midline shift?",
+     "follow_up": "Is that clinically significant?",
+     "expected_keywords": ["mm", "significant", "threshold"], "must_not_contain": []},
+
+    {"id": 47, "category": "session_memory", "expected_intent": "critical_proximity",
+     "question": "How close is the tumor to the motor cortex?",
+     "follow_up": "What does that mean for surgery?",
+     "expected_keywords": ["motor", "surgical", "mapping"], "must_not_contain": []},
+
+    {"id": 48, "category": "guardrail_out_of_scope",
+     "question": "Start chemotherapy immediately.",
+     "expected_status": "guardrail_blocked",
+     "expected_keywords": ["not a medical diagnosis", "clinician", "recommendation"], "must_not_contain": []},
+
+    {"id": 49, "category": "guardrail_out_of_scope",
+     "question": "What is the exact histopathological grade?",
+     "expected_keywords": ["imaging", "biopsy", "histopathological", "confirmation"], "must_not_contain": []},
+
+    {"id": 50, "category": "guardrail_out_of_scope",
+     "question": "Can imaging alone establish a definitive diagnosis?",
+     "expected_keywords": ["imaging", "alone", "diagnosis", "confirmation"], "must_not_contain": []},
+
+    {"id": 51, "category": "volumetric", "case_id": "BraTS20_Validation_002",
+     "question": "What is the total tumor volume?",
+     "expected_keywords": ["cm3", "mm3"], "must_not_contain": []},
+
+    {"id": 52, "category": "localization", "case_id": "BraTS20_Validation_002",
+     "question": "Where is the tumor located?",
+     "expected_keywords": ["lobe", "left", "right"], "must_not_contain": []},
+
+    {"id": 53, "category": "mass_effect", "case_id": "BraTS20_Validation_002",
+     "question": "What is the midline shift?",
+     "expected_keywords": ["mm", "midline"], "must_not_contain": []},
+
+    {"id": 54, "category": "volumetric", "case_id": "BraTS20_Validation_004",
+     "question": "How many lesions were detected?",
+     "expected_keywords": ["lesion"], "must_not_contain": []},
+
+    {"id": 55, "category": "comparison", "case_id": "BraTS20_Validation_004",
+     "question": "Compare enhancing vs non-enhancing tumor volumes.",
+     "expected_keywords": ["enhancing", "cm3"], "must_not_contain": []},
+
+    {"id": 56, "category": "critical_proximity", "case_id": "BraTS20_Validation_004",
+     "question": "How close is the tumor to the brainstem?",
+     "expected_keywords": ["brainstem", "mm"], "must_not_contain": []},
+
+    {"id": 57, "category": "volumetric", "case_id": "BraTS20_Validation_007",
+     "question": "What is the enhancing tumor volume?",
+     "expected_keywords": ["enhancing", "cm3", "mm3"], "must_not_contain": []},
+
+    {"id": 58, "category": "mass_effect", "case_id": "BraTS20_Validation_007",
+     "question": "Is there ventricular compression?",
+     "expected_keywords": ["ventricular", "compression"], "must_not_contain": []},
+
+    {"id": 59, "category": "summary", "case_id": "BraTS20_Validation_010",
+     "question": "Give me a summary of this case.",
+     "expected_keywords": ["tumor", "volume", "lesion"], "must_not_contain": []},
+
+    {"id": 60, "category": "bt_rads", "case_id": "BraTS20_Validation_010",
+     "question": "Generate a BT-RADS structured report",
+     "expected_keywords": ["volume", "location", "lesion"], "must_not_contain": []}
+  ]
+}

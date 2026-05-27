@@ -1,0 +1,18 @@
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: rgba(34,191,160,0.08);
+  border: 1px solid rgba(34,191,160,0.28);
+  border-radius: var(--radius-sm);
+  color: var(--success);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-save:hover {
+  background: rgba(34,191,160,0.15);
+  border-color: rgba(34,191,160,0.5);
+}

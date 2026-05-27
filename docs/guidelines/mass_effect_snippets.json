@@ -1,0 +1,56 @@
+{
+  "corpus": "Mass Effect, Midline Shift, and Herniation — Clinical Reference Snippets",
+  "source": "Marmarou 1987; Marshall 1991; Ropper 1986; Hemphill 2015 ICH Score; neurotrauma literature",
+  "snippets": [
+    {
+      "id": "mls_thresholds",
+      "tags": ["midline shift", "mls", "thresholds", "clinical significance", "herniation"],
+      "text": "Midline Shift (MLS) Thresholds: MLS ≥3mm is considered radiographically significant. MLS ≥5mm is widely cited as clinically meaningful and associated with increased ICP risk. MLS ≥7–7.5mm is a surrogate threshold for herniation risk, linked in neurotrauma literature to effacement of basal cisterns and abnormal pupillary findings (Ropper 1986, Marmarou 1987). MLS ≥10mm is associated with high mortality and typically requires emergent neurosurgical intervention."
+    },
+    {
+      "id": "mls_brain_tumor",
+      "tags": ["midline shift", "mls", "brain tumor", "glioma", "mass effect"],
+      "text": "Midline shift in brain tumor context: Unlike acute hemorrhage where MLS develops over hours, tumor-related MLS develops slowly, allowing some cerebral accommodation. However, MLS in high-grade glioma still correlates with elevated ICP, herniation risk, and worse outcomes. Tumor-related MLS >10mm is associated with significantly reduced Karnofsky Performance Score and poorer surgical candidacy. Mass effect from edema (T2/FLAIR signal) often contributes more to MLS than the enhancing tumor core itself."
+    },
+    {
+      "id": "ventricular_compression",
+      "tags": ["ventricular compression", "hydrocephalus", "ICP", "mass effect"],
+      "text": "Ventricular Compression: Tumor-induced compression of the lateral ventricles indicates significant mass effect. Ipsilateral ventricular compression with contralateral dilation (trapping) suggests obstructive hydrocephalus. Ventricular compression is an independent predictor of clinical deterioration. The proximity of tumor/edema to ventricular walls (<5mm) is associated with CSF pathway involvement and elevated ICP risk. Transependymal edema (periventricular FLAIR signal) indicates active hydrocephalus."
+    },
+    {
+      "id": "basal_cisterns",
+      "tags": ["basal cisterns", "herniation", "cisternal effacement", "uncal herniation"],
+      "text": "Basal Cistern Assessment: Patent basal cisterns (prepontine, suprasellar, ambient, quadrigeminal) indicate absence of significant downward herniation. Partial effacement of any basal cistern is an early warning sign. Complete obliteration of basal cisterns is a neurosurgical emergency and correlates with Cushing's triad. Ambient cistern effacement specifically indicates uncal herniation; quadrigeminal cistern effacement indicates central transtentorial herniation."
+    },
+    {
+      "id": "herniation_types",
+      "tags": ["herniation", "uncal", "transtentorial", "subfalcine", "tonsillar"],
+      "text": "Brain Herniation Syndromes: (1) Subfalcine herniation — cingulate gyrus displaced under falx cerebri; most common type, caused by unilateral supratentorial mass; MLS ≥5mm often present. (2) Uncal (transtentorial) herniation — medial temporal lobe compressed through tentorial notch; CN III palsy, altered consciousness; basal cistern effacement on imaging. (3) Central herniation — bilateral downward displacement of diencephalon; symmetric midbrain changes. (4) Tonsillar herniation — cerebellar tonsils through foramen magnum; often fatal without immediate decompression."
+    },
+    {
+      "id": "sulcal_effacement",
+      "tags": ["sulcal effacement", "cerebral edema", "ICP", "mass effect"],
+      "text": "Sulcal Effacement: Loss of CSF-filled sulci indicates cerebral swelling/edema. Hemispheric asymmetry in sulcal pattern is an early, sensitive sign of focal edema. FLAIR-based measurement of peripheral CSF signal can quantify sulcal effacement. Generalized sulcal effacement with loss of gray-white differentiation indicates diffuse cerebral edema (malignant edema), a neurological emergency. In tumor patients, progressive sulcal effacement on serial imaging indicates increasing mass effect."
+    },
+    {
+      "id": "ich_score_mls",
+      "tags": ["ICH score", "midline shift", "prognosis", "hemorrhage", "mass effect"],
+      "text": "ICH Score and MLS: The ICH Score (Hemphill 2015) includes volume >30cc and infratentorial location as prognostic factors. While designed for hemorrhage, MLS thresholds derived from hemorrhage studies are commonly applied to tumor mass effect. Key parallel: MLS ≥5mm in any supratentorial mass (tumor or hemorrhage) warrants urgent neurosurgical consultation. The 30-day mortality increases significantly with MLS >10mm regardless of etiology."
+    },
+    {
+      "id": "icp_management",
+      "tags": ["ICP", "intracranial pressure", "management", "corticosteroids", "osmotherapy"],
+      "text": "ICP Management in Brain Tumor Mass Effect: Dexamethasone (4–16 mg/day) is first-line for peritumoral vasogenic edema in brain tumors; reduces FLAIR signal within 24–72 hours, may reduce MLS by 2–5mm. Osmotherapy (mannitol 0.5–1 g/kg or hypertonic saline) is used for acute ICP crises. Surgical decompression is indicated for MLS ≥10mm with clinical deterioration or herniation. EVD (external ventricular drain) for obstructive hydrocephalus from tumor. Note: imaging-detected MLS often underestimates true ICP."
+    },
+    {
+      "id": "edema_volume_clinical",
+      "tags": ["edema", "FLAIR", "mass effect", "vasogenic edema", "clinical correlation"],
+      "text": "Peritumoral Edema Volume and Clinical Significance: Edema volume >60 cm³ is associated with clinical mass effect symptoms (headache, altered consciousness, focal deficits). Edema-to-tumor volume ratio >3:1 suggests predominantly vasogenic edema (steroid-responsive) rather than infiltrative tumor. T2/FLAIR signal extending to the corpus callosum or contralateral hemisphere indicates aggressive infiltration or gliomatosis. Serial edema volume on FLAIR is a surrogate for treatment response when the enhancing core is small or absent (e.g., IDH-mutant gliomas)."
+    },
+    {
+      "id": "mls_measurement_method",
+      "tags": ["midline shift", "measurement", "methodology", "automated", "centroid"],
+      "text": "MLS Measurement Methodology: Manual MLS measurement uses axial CT or MRI at the level of the foramen of Monro, measuring lateral displacement of septum pellucidum from the midline. Automated methods (centroid-based or AI) show high correlation with manual measurement (r >0.90) but may underestimate MLS in asymmetric or multifocal tumors. For clinical decisions, automated MLS should be confirmed by direct neuroradiological review. Reported MLS values have inter-rater variability of ±1–2mm; thresholds (5mm, 7.5mm, 10mm) should be applied with this uncertainty in mind."
+    }
+  ]
+}

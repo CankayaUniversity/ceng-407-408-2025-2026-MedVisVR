@@ -1,0 +1,51 @@
+{
+  "corpus": "BraTS Segmentation Labels, Regions, and Clinical Interpretation",
+  "source": "BraTS challenge 2015–2023; Menze et al. 2015; Bakas et al. 2018; Baid et al. 2021",
+  "snippets": [
+    {
+      "id": "brats_labels_overview",
+      "tags": ["brats", "labels", "segmentation", "ncr", "et", "edema", "overview"],
+      "text": "BraTS segmentation uses three mutually exclusive labels: Label 1 = NCR (Necrotic Core), Label 2 = ED (Peritumoral Edema/Invasion), Label 4 = ET (Enhancing Tumor). These map to standard MRI signals: ET is T1ce hyperintense relative to white matter; NCR is T1ce hypointense within the T1ce-enhancing region; ED is T2/FLAIR hyperintense beyond the enhancing margin. Composite regions: Whole Tumor (WT) = labels 1+2+4; Tumor Core (TC) = labels 1+4; Enhancing Tumor (ET) = label 4."
+    },
+    {
+      "id": "brats_et_label4",
+      "tags": ["brats", "label 4", "enhancing tumor", "ET", "active tumor", "blood-brain barrier"],
+      "text": "Label 4 — Enhancing Tumor (ET): Represents active tumor with blood-brain barrier (BBB) breakdown, visible as T1ce hyperintensity. ET volume is the primary determinant of BT-RADS scoring and treatment response assessment. ET >6 cm3 at diagnosis is associated with significantly worse OS in GBM (Ellingson 2016). In IDH-wildtype GBM, robust enhancement is typical; IDH-mutant gliomas often show less enhancement. Absence of enhancement does not exclude high-grade histology (up to 10% of GBM are non-enhancing)."
+    },
+    {
+      "id": "brats_ncr_label1",
+      "tags": ["brats", "label 1", "necrotic core", "NCR", "necrosis", "glioblastoma"],
+      "text": "Label 1 — Necrotic Core (NCR): Represents tumor necrosis, a hallmark of GBM (WHO grade 4 glioma). NCR appears hypointense on T1ce within the enhancing rim. NCR volume correlates with tumor aggressiveness; large necrotic cores (>30% of tumor core) are associated with worse prognosis. Post-treatment, distinguishing radiation necrosis from tumor NCR is challenging — advanced imaging (FET-PET, perfusion MRI) is required. NCR + ET together form the Tumor Core (TC), used in BraTS challenge metrics (Dice TC)."
+    },
+    {
+      "id": "brats_edema_label2",
+      "tags": ["brats", "label 2", "edema", "ED", "FLAIR", "peritumoral", "infiltration"],
+      "text": "Label 2 — Peritumoral Edema/Invasion (ED): Represents T2/FLAIR signal abnormality surrounding the tumor core. In high-grade gliomas, this region contains a mixture of vasogenic edema and infiltrating tumor cells — not pure edema. Edema-only treatment (e.g., dexamethasone) improves symptoms but does not eradicate infiltrating cells. ED volume (FLAIR extent) is used in surgical planning for extent-of-resection decisions and is included in radiation planning target volumes. ED-to-ET ratio provides information about tumor infiltrative pattern."
+    },
+    {
+      "id": "brats_whole_tumor",
+      "tags": ["brats", "whole tumor", "WT", "total volume", "survival", "labels 1+2+4"],
+      "text": "Whole Tumor (WT = labels 1+2+4): The total segmented lesion volume including all tumor-related abnormality. WT volume >100 cm3 is associated with significantly reduced OS. WT is used in radiation planning to define the clinical target volume (CTV). In BraTS challenge metrics, Dice WT measures the accuracy of full lesion segmentation. Large WT volumes (>120 cm3) correlate with poor performance status and often indicate unresectable disease."
+    },
+    {
+      "id": "brats_tumor_core",
+      "tags": ["brats", "tumor core", "TC", "labels 1+4", "resection", "surgical target"],
+      "text": "Tumor Core (TC = labels 1+4): Enhancing tumor + necrotic core, representing the surgically resectable target. Gross total resection (GTR) of TC is associated with improved OS in GBM (Brown 2016: median OS 16.1 vs 11.8 months for GTR vs subtotal resection). TC volume is used to calculate extent of resection (EOR) = (pre-op TC - post-op TC) / pre-op TC × 100%. EOR >98% is the threshold for meaningful survival benefit in most retrospective series."
+    },
+    {
+      "id": "brats_lobe_localization",
+      "tags": ["brats", "lobe", "localization", "frontal", "temporal", "parietal", "occipital", "prognosis"],
+      "text": "Lobe Localization and Prognosis in Glioma: Frontal lobe tumors have relatively better prognosis and are more amenable to GTR. Temporal lobe tumors near language cortex (Broca's/Wernicke's) require awake craniotomy. Parietal lobe tumors involving sensorimotor cortex risk postoperative neurological deficits. Occipital tumors carry visual field deficit risk. Insular gliomas have poor prognosis and technical challenges due to proximity to M1 branches and eloquent cortex. Deep/thalamic tumors are typically unresectable and treated with biopsy + chemoradiation."
+    },
+    {
+      "id": "brats_depth_classification",
+      "tags": ["brats", "depth", "cortical", "subcortical", "deep white matter", "eloquent"],
+      "text": "Tumor Depth Classification: Cortical (≤5mm from pial surface): high risk for cortical stimulation during awake craniotomy; consider neurophysiological monitoring. Subcortical (5–30mm): involves white matter tracts; diffusion tensor imaging (DTI) tractography recommended to map eloquent pathways. Deep white matter (>30mm from surface): involves corona radiata, internal capsule, or thalamus; higher surgical morbidity, often treated without resection. Depth directly impacts surgical approach planning and expected post-operative deficits."
+    },
+    {
+      "id": "brats_idh_methylation",
+      "tags": ["IDH", "MGMT", "molecular markers", "glioma classification", "WHO 2021"],
+      "text": "Molecular Markers and BraTS Imaging Correlation: WHO 2021 classification integrates molecular markers with imaging. IDH-mutant gliomas: often lower-grade appearance, less enhancement, more circumscribed; better prognosis. IDH-wildtype GBM (WHO grade 4): aggressive enhancement, necrosis, widespread FLAIR infiltration. MGMT promoter methylation (~45% of GBM): predicts response to temozolomide; associated with higher pseudoprogression rate. Ring-enhancing pattern with central necrosis on T1ce is classic for IDH-wildtype GBM. Imaging cannot reliably determine IDH/MGMT status — biopsy required."
+    }
+  ]
+}

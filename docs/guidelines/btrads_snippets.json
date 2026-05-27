@@ -1,0 +1,56 @@
+{
+  "corpus": "BT-RADS Brain Tumor Reporting and Data System",
+  "source": "Ellingson et al., AJNR 2017; RANO criteria 2010; iRANO 2015",
+  "snippets": [
+    {
+      "id": "btrads_overview",
+      "tags": ["bt-rads", "overview", "structured reporting"],
+      "text": "BT-RADS (Brain Tumor Reporting and Data System) is a standardized lexicon for brain tumor MRI reporting analogous to BI-RADS for breast imaging. It provides a 1–4 scale to communicate likelihood of tumor progression and guide management decisions. BT-RADS scores should be assigned after integrating all available sequences (T1, T1ce, T2, FLAIR) and clinical context."
+    },
+    {
+      "id": "btrads_1",
+      "tags": ["bt-rads", "bt-rads-1", "no progression", "stable"],
+      "text": "BT-RADS 1 — No evidence of tumor progression. Imaging shows stable or decreased enhancement and no new T2/FLAIR signal abnormality. Management: routine surveillance per protocol. Typical follow-up: 2–3 months for high-grade glioma."
+    },
+    {
+      "id": "btrads_2",
+      "tags": ["bt-rads", "bt-rads-2", "probably no progression", "treatment effect"],
+      "text": "BT-RADS 2 — Probably no tumor progression. Minor changes in enhancement or T2/FLAIR may represent treatment effect (pseudoprogression or radiation necrosis) rather than true progression. Management: short-interval follow-up MRI in 4–6 weeks. Pseudoprogression occurs in ~20–30% of patients treated with temozolomide/radiation (Stupp protocol), typically within 3 months."
+    },
+    {
+      "id": "btrads_3a",
+      "tags": ["bt-rads", "bt-rads-3a", "equivocal", "possible progression"],
+      "text": "BT-RADS 3A — Equivocal; tumor progression possible. Increased enhancement or T2/FLAIR signal without definitive features of progression. Management: short-interval MRI (4–6 weeks), consider advanced imaging (perfusion MRI, MR spectroscopy, amino acid PET). Cannot reliably distinguish pseudoprogression from true progression on conventional MRI alone."
+    },
+    {
+      "id": "btrads_3b",
+      "tags": ["bt-rads", "bt-rads-3b", "probable progression"],
+      "text": "BT-RADS 3B — Probable tumor progression. New or significantly increasing enhancement with T2/FLAIR growth beyond the radiation field, or new lesions. Management: multidisciplinary tumor board discussion, consider repeat biopsy or surgical re-resection. Advanced imaging (FET-PET, MR perfusion) recommended to confirm before major treatment change."
+    },
+    {
+      "id": "btrads_4",
+      "tags": ["bt-rads", "bt-rads-4", "definite progression", "recurrence"],
+      "text": "BT-RADS 4 — Definite tumor progression. Unequivocal increase in enhancing tumor ≥25% (RANO criteria), new enhancement remote from original site, or clinically significant neurological deterioration without other explanation. Management: immediate multidisciplinary team evaluation for re-resection, salvage therapy, or best supportive care."
+    },
+    {
+      "id": "rano_criteria",
+      "tags": ["rano", "response assessment", "progression criteria", "bt-rads"],
+      "text": "RANO criteria (Response Assessment in Neuro-Oncology, Wen et al. 2010): Complete Response = disappearance of all enhancing disease on stable/reduced corticosteroids; Partial Response = ≥50% reduction in sum of products of perpendicular diameters; Stable Disease = neither CR/PR nor Progression; Progression = ≥25% increase in sum or any new lesion. T2/FLAIR changes are secondary but contribute to overall assessment."
+    },
+    {
+      "id": "btrads_volumetric",
+      "tags": ["bt-rads", "volumetric", "enhancing volume", "tumor burden"],
+      "text": "Volumetric BT-RADS: Enhancing tumor volume (ETV) is a more reproducible and sensitive measure than bidimensional diameters. ETV >6 cm3 at initial diagnosis is associated with significantly worse overall survival in GBM (Ellingson 2016). Serial volumetric tracking on T1ce sequences is recommended. Edema volume (T2/FLAIR abnormality minus enhancing core) provides additional prognostic information regarding infiltrative burden."
+    },
+    {
+      "id": "btrads_components",
+      "tags": ["bt-rads", "brats", "segmentation", "ncr", "et", "edema", "components"],
+      "text": "BraTS segmentation labels map to BT-RADS components: Label 4 (ET, enhancing tumor) corresponds to the actively proliferating tumor core used in BT-RADS response assessment. Label 1 (NCR, necrotic core) and Label 2 (ED, peritumoral edema/invasion) contribute to whole tumor volume. In BT-RADS evaluation: enhancing volume (label 4) drives progression scoring; edema volume (label 2) reflects infiltrative burden."
+    },
+    {
+      "id": "btrads_pseudoprogression",
+      "tags": ["pseudoprogression", "treatment effect", "bt-rads-2", "bt-rads-3a"],
+      "text": "Pseudoprogression: Transient increase in enhancement within 3 months of concurrent chemoradiation (Stupp protocol) due to treatment-induced inflammation rather than true tumor growth. Occurs in ~20–30% of GBM patients. MGMT-methylated tumors have higher pseudoprogression rates (~40%). Features favoring pseudoprogression: enhancement within radiation field, no new T2 lesions beyond field, stable/improving clinical status. MR perfusion (low rCBV), MR spectroscopy (elevated Cho/NAA), or FET-PET can help differentiate."
+    }
+  ]
+}

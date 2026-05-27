@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:100%;height:100%;overflow:hidden;background:#060a10;font-family:'Segoe UI Variable','Segoe UI',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  /* subtle grid */
+  .grid{position:fixed;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(0,189,232,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,189,232,0.025) 1px,transparent 1px);
+    background-size:40px 40px}
+
+  /* scan line */
+  .scan{position:fixed;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(0,189,232,0.4),transparent);
+    animation:scanDown 3.2s ease-in-out infinite;pointer-events:none}
+  @keyframes scanDown{0%{top:-2px;opacity:0}5%{opacity:1}95%{opacity:.2}100%{top:100%;opacity:0}}
+
+  /* centre stage */
+  .stage{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;gap:0;position:relative;z-index:1}
+
+  /* logo */
+  .logo-wrap{animation:fadeUp .7s cubic-bezier(.22,1,.36,1) .05s both}
+  .logo-ring{
+    width:168px; height:168px;
+    border-radius:50%;
+    padding:3px;
+    background:linear-gradient(135deg,rgba(0,189,232,0.55) 0%,rgba(38,120,255,0.40) 60%,rgba(0,189,232,0.25) 100%);
+    box-shadow:
+      0 0 0 1px rgba(0,189,232,0.45),
+      0 0 28px rgba(0,189,232,0.55),
+      0 0 60px rgba(0,189,232,0.22),
+      0 0 100px rgba(38,120,255,0.14);
+    animation:ringGlow 3s ease-in-out infinite alternate;
+  }
+  @keyframes ringGlow{
+    from{box-shadow:0 0 0 1px rgba(0,189,232,0.45),0 0 22px rgba(0,189,232,0.45),0 0 50px rgba(0,189,232,0.18);}
+    to  {box-shadow:0 0 0 1px rgba(0,189,232,0.65),0 0 36px rgba(0,189,232,0.70),0 0 80px rgba(0,189,232,0.28);}
+  }
+  .logo-img{
+    width:100%; height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    image-rendering:-webkit-optimize-contrast;
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+  /* tagline */
+  .tagline{
+    font-size:9px;color:#3d5a78;letter-spacing:2.5px;text-transform:uppercase;
+    text-align:center;line-height:1.7;
+    margin-top:16px;
+    animation:fadeUp .6s ease .55s both
+  }
+
+  /* divider */
+  .div{height:1px;width:0;background:linear-gradient(90deg,transparent,#00bde8,transparent);
+    margin:14px auto;animation:expand .6s ease .75s forwards}
+  @keyframes expand{to{width:160px}}
+
+  /* progress bar */
+  .bar-wrap{width:160px;animation:fadeUp .5s ease .85s both}
+  .bar-label{font-size:8.5px;color:#243d52;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:7px}
+  .bar-track{height:2px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden}
+  .bar-fill{height:100%;width:0;background:linear-gradient(90deg,#0097c4,#00bde8);border-radius:2px;
+    animation:load 3.8s cubic-bezier(.4,0,.2,1) .9s forwards}
+  @keyframes load{0%{width:0}30%{width:28%}65%{width:60%}85%{width:80%}100%{width:100%}}
+
+  /* version */
+  .ver{position:fixed;bottom:12px;right:14px;font-size:8.5px;color:rgba(61,90,120,.35);letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="scan"></div>
+
+<div class="stage">
+  <div class="logo-wrap">
+    <div class="logo-ring">
+      <img class="logo-img" src="../assets/lumina_logo.png" alt="LUMINA"/>
+    </div>
+  </div>
+
+  <div class="tagline">Clinical Anatomical Rendering<br/>Visualization Intelligent System</div>
+  <div class="div"></div>
+
+  <div class="bar-wrap">
+    <div class="bar-label">Initialising</div>
+    <div class="bar-track"><div class="bar-fill"></div></div>
+  </div>
+</div>
+
+<div class="ver">v1.0.0</div>
+</body>
+</html>

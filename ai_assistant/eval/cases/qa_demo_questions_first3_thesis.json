@@ -1,0 +1,18 @@
+{
+  "questions": [
+    "What is the total tumor volume?",
+    "How many lesions were detected?",
+    "What is the maximum tumor diameter?",
+    "What is the largest lesion and where is it located?",
+    "Compare enhancing vs non-enhancing tumor volumes.",
+    "What is the edema-to-tumor volume ratio?",
+    "Is this more consistent with one dominant lesion group or multifocal disease?",
+    "Provide a concise tumor board style summary for this case.",
+    "Can you diagnose based on imaging alone?",
+    "Is this definitely a glioblastoma?",
+    "What additional clinical information would reduce uncertainty?",
+    "Should the patient start chemotherapy immediately?",
+    "What is the patient's survival prognosis?",
+    "Should I worry about this finding?"
+  ]
+}

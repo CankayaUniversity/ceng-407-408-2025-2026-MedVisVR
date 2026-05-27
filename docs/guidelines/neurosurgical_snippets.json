@@ -1,0 +1,56 @@
+{
+  "corpus": "Neurosurgical Planning — Critical Structure Proximity and Operative Considerations",
+  "source": "Duffau 2012; Berger 2009; Chang 2003; Keles 2001; NCCN CNS Guidelines 2024",
+  "snippets": [
+    {
+      "id": "motor_cortex_proximity",
+      "tags": ["motor cortex", "M1", "precentral gyrus", "surgical planning", "proximity", "hemiparesis"],
+      "text": "Motor Cortex (M1) Proximity: Distance from tumor margin to primary motor cortex (precentral gyrus) is a critical surgical planning parameter. <5mm: Sub-5mm eloquent interval; surgically high-risk, strong mapping caution required; awake craniotomy with direct cortical stimulation typically indicated. 5–20mm: Intermediate motor-eloquence corridor; resection warrants caution; intraoperative neurophysiological monitoring (MEP/SSEP) recommended. >20mm: Relatively safe corridor; standard resection feasible with standard monitoring. Note: motor cortex mapping is essential regardless of distance in language-dominant hemisphere."
+    },
+    {
+      "id": "brainstem_proximity",
+      "tags": ["brainstem", "surgical planning", "proximity", "cranial nerves", "respiraton"],
+      "text": "Brainstem Proximity: Tumor within 10mm of brainstem requires heightened caution. <5mm: Surgical approach carries high risk of permanent deficits (CN palsies, respiratory compromise); biopsy-only or stereotactic radiosurgery preferred; neurosurgical consultation mandatory. 5–10mm: Within intermediate proximity corridor; caution for evolving mass effect or direct invasion; surgical margins must be carefully planned. >10mm: Standard approach feasible with appropriate monitoring. Brainstem compression from adjacent tumor/edema is an independent predictor of poor outcome."
+    },
+    {
+      "id": "awake_craniotomy",
+      "tags": ["awake craniotomy", "language mapping", "motor mapping", "eloquent cortex", "surgical planning"],
+      "text": "Awake Craniotomy Indications: Recommended when tumor is within or adjacent to eloquent cortex (motor, language, visual). Language cortex: Broca's area (left inferior frontal gyrus), Wernicke's area (left posterior superior temporal gyrus), and subcortical language pathways (arcuate fasciculus). Motor cortex: precentral gyrus and corticospinal tract. Awake craniotomy enables direct cortical and subcortical stimulation, maximizing extent of resection while preserving function. Associated with comparable or superior functional outcomes versus general anesthesia in eloquent region tumors (Duffau 2012)."
+    },
+    {
+      "id": "extent_of_resection",
+      "tags": ["extent of resection", "EOR", "GTR", "STR", "survival", "resectability"],
+      "text": "Extent of Resection (EOR) in GBM: Gross Total Resection (GTR, EOR ≥98%) is associated with improved OS (median OS 16.1 vs 11.8 months, Brown 2016). Near-total resection (NTR, EOR 90–98%) also provides significant benefit. Supratotal resection (beyond MRI-enhancing margins into FLAIR signal) is being investigated in IDH-mutant gliomas. Resectability is contraindicated when: tumor involves both motor cortices or corpus callosum (butterfly glioma), primary language cortex in dominant hemisphere, bilateral thalami, or brainstem. Pre-operative functional MRI (fMRI) and DTI tractography are standard for eloquent tumor planning."
+    },
+    {
+      "id": "functional_mri_dti",
+      "tags": ["fMRI", "DTI", "tractography", "surgical planning", "white matter tracts"],
+      "text": "Functional Imaging for Surgical Planning: fMRI (BOLD) maps eloquent cortex activation (motor, language, visual). DTI tractography delineates critical white matter tracts: corticospinal tract (CST), arcuate fasciculus (AF), optic radiations (OR), superior longitudinal fasciculus (SLF). Tumor-to-tract distance on DTI <5mm is associated with high risk of post-operative motor or language deficit. Limitations: BOLD signal may be displaced near tumor; tractography can fail in edematous white matter due to T2 signal artifact (false negative tract absence)."
+    },
+    {
+      "id": "surgical_planning_algorithm",
+      "tags": ["surgical planning", "algorithm", "decision", "motor cortex", "brainstem", "MLS"],
+      "text": "Surgical Planning Decision Framework: Step 1 — Determine eloquent cortex involvement (motor <5mm → awake crani or mapping; language → awake crani dominant hemisphere). Step 2 — Assess brainstem proximity (<10mm → biopsy preferred). Step 3 — Evaluate MLS: >10mm with clinical deterioration → emergent decompression. Step 4 — Calculate estimated EOR from volumetric imaging. Step 5 — Molecular marker estimation from imaging phenotype (enhancement pattern, IDH probability). Step 6 — Multidisciplinary tumor board discussion before intervention."
+    },
+    {
+      "id": "intraop_mri",
+      "tags": ["intraoperative MRI", "iMRI", "extent of resection", "real-time imaging"],
+      "text": "Intraoperative MRI (iMRI): Real-time MRI during craniotomy allows assessment of residual tumor and brain shift correction. Associated with higher GTR rates in eloquent region GBM (Senft 2011: 33% GTR vs 12% without iMRI). Particularly valuable when preoperative imaging suggests near-complete resectability. Disadvantages: increased operative time, cost, workflow complexity. Alternative: 5-ALA fluorescence-guided resection provides real-time metabolic tumor visualization without MRI hardware requirements."
+    },
+    {
+      "id": "stereotactic_radiosurgery",
+      "tags": ["SRS", "radiosurgery", "stereotactic", "unresectable", "recurrence", "treatment"],
+      "text": "Stereotactic Radiosurgery (SRS) Indications: Primary treatment for surgically inaccessible tumors (deep, eloquent, brainstem-adjacent). Recurrent GBM after prior resection and chemoradiation. Brain metastases (multiple or eloquent location). Lesion size ≤3cm is standard SRS criterion (≤4cm in some centers). GKS/CyberKnife/LINAC-based SRS achieves local control rates of 70–90% for brain metastases at 1 year. For primary gliomas, SRS is adjuvant rather than curative due to infiltrative nature."
+    },
+    {
+      "id": "corticospinal_tract_proximity",
+      "tags": ["corticospinal tract", "CST", "DTI", "motor pathway", "proximity", "surgical planning"],
+      "text": "Corticospinal Tract (CST) Proximity Assessment: DTI tractography is the standard method for CST delineation in surgical planning. Tumor-to-CST distance <5mm on DTI is associated with high risk (OR 4.2) of post-operative motor deficit (Keles 2001). CST displacement by tumor (versus direct infiltration) carries a more favorable prognosis. Infiltration of CST by tumor (T2 signal abnormality within tract) significantly increases deficit risk even with complete anatomical tract continuity. Fractional anisotropy (FA) <0.2 within CST suggests severe disruption. Post-operative diffusion imaging 24–48 hours after surgery can detect acute tract injury before clinical deficit develops."
+    },
+    {
+      "id": "ventricular_proximity",
+      "tags": ["ventricle", "ependyma", "ventricular dissemination", "surgical planning", "proximity"],
+      "text": "Ventricular Wall Proximity: Tumor within 5mm of the ventricular ependyma carries elevated risk of (1) intraoperative CSF leak and ventricular flooding, (2) ventricular dissemination of tumor cells post-resection. Ependymal involvement on pre-operative T1ce (ependymal enhancement) indicates established ventricular involvement and worsens prognosis significantly (median OS reduction ~3–4 months in GBM). Surgical approach near ventricle should avoid opening the ependyma unless absolutely necessary. Post-resection CSF cytology or MRI spine staging is recommended if ventricular wall breach occurs."
+    }
+  ]
+}

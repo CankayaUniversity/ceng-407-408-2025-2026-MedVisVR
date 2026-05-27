@@ -1,0 +1,28 @@
+appId: com.carvis.clinical
+productName: CARVIS
+copyright: CARVIS — Clinical Anatomical Rendering Visualization Intelligent System
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - "dist/**"
+  - "electron/**"
+  - "package.json"
+  - "!**/*.map"
+  - "!node_modules/.bin"
+  - "!src/**"
+
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+    - target: dir
+      arch:
+        - x64
+  icon: build/lumina.ico
+
+portable:
+  artifactName: "CARVIS-${version}-portable.exe"

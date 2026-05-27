@@ -1,0 +1,74 @@
+{
+  "snippets": [
+    {
+      "id": "liver_vol_normal",
+      "text": "Normal liver volume in adults ranges from 1000-1500 ml (approximately 20-25 ml/kg body weight). Hepatomegaly is defined as liver volume >1500 ml or >2 SD above mean for body surface area.",
+      "tags": [
+        "liver",
+        "volume",
+        "normal",
+        "hepatomegaly"
+      ],
+      "corpus": "hepatology_guidelines"
+    },
+    {
+      "id": "liver_tumor_resectability",
+      "text": "Hepatic resectability requires: future liver remnant (FLR) ≥20% in normal liver, ≥30% in chemotherapy-treated liver, ≥40% in cirrhotic liver. Tumor-to-liver ratio >30% is associated with inadequate FLR.",
+      "tags": [
+        "liver",
+        "resection",
+        "tumor_ratio",
+        "FLR",
+        "surgery"
+      ],
+      "corpus": "hepatology_guidelines"
+    },
+    {
+      "id": "couinaud_surgical",
+      "text": "Couinaud segments guide anatomical liver resection. Right hepatectomy removes segments V-VIII. Left hepatectomy removes segments II-IV. Segment I (caudate) is considered separately. Portal vein branches define segment boundaries.",
+      "tags": [
+        "couinaud",
+        "segments",
+        "resection",
+        "liver",
+        "anatomy"
+      ],
+      "corpus": "hepatology_guidelines"
+    },
+    {
+      "id": "liver_rads",
+      "text": "LI-RADS v2018 categorizes hepatocellular carcinoma risk: LR-1 (definitely benign), LR-2 (probably benign), LR-3 (intermediate), LR-4 (probably HCC), LR-5 (definitely HCC ≥10mm with major HCC features). Arterial phase hyperenhancement and washout are major features.",
+      "tags": [
+        "liver",
+        "HCC",
+        "LI-RADS",
+        "classification",
+        "malignancy"
+      ],
+      "corpus": "hepatology_guidelines"
+    },
+    {
+      "id": "lung_nodule_fleischner",
+      "text": "Fleischner Society guidelines for incidental lung nodules (2017): Solid nodule <6mm: no routine follow-up (low risk). 6-8mm: 6-12 month CT follow-up. >8mm: consider PET-CT or biopsy. Ground-glass nodules require longer follow-up intervals (24 months for persistent GGO >6mm).",
+      "tags": [
+        "lung",
+        "nodule",
+        "Fleischner",
+        "follow-up",
+        "screening"
+      ],
+      "corpus": "lung_guidelines"
+    },
+    {
+      "id": "lung_staging",
+      "text": "TNM 8th edition lung staging: T1 ≤3cm, T2 3-5cm, T3 5-7cm, T4 >7cm or invasion. N0 no nodes, N1 ipsilateral hilar, N2 ipsilateral mediastinal, N3 contralateral. M0 no metastasis, M1a contralateral lung/pleural, M1b single extrathoracic, M1c multiple extrathoracic.",
+      "tags": [
+        "lung",
+        "staging",
+        "TNM",
+        "classification"
+      ],
+      "corpus": "lung_guidelines"
+    }
+  ]
+}

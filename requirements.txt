@@ -1,0 +1,35 @@
+# ── Web framework ─────────────────────────────────────────────
+fastapi==0.135.3
+uvicorn[standard]==0.44.0
+pydantic==2.12.5
+python-multipart==0.0.27
+
+# ── Medical imaging ───────────────────────────────────────────
+nibabel==5.4.2
+SimpleITK==2.5.3
+pydicom==3.0.2
+scipy==1.17.1
+scikit-image==0.26.0
+
+# ── Atlas & neuroimaging ─────────────────────────────────────
+nilearn==0.13.1
+
+# ── AI / ML ───────────────────────────────────────────────────
+torch==2.11.0
+torchvision==0.26.0
+nnunetv2==2.7.0
+sentence-transformers==5.4.0
+
+# ── Retrieval & NLP ───────────────────────────────────────────
+rank_bm25==0.2.2
+rapidfuzz==3.14.5
+pyspellchecker
+
+# ── Utilities ─────────────────────────────────────────────────
+numpy==2.4.4
+httpx==0.28.1
+pytest
+
+# nnUNet v1 — liver segmentation (Task003_Liver, v1.7.x format model)
+git+https://github.com/MIC-DKFZ/nnUNet.git@nnunetv1
+pathos
