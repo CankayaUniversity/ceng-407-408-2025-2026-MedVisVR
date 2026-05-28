@@ -2,8 +2,6 @@
 
 <div align="center">
 
-<img src="https://private-user-images.githubusercontent.com/115018936/520385728-110dd15e-0a21-4cbe-a9b9-46f5ccebe5b9.jpg" alt="MedVisVR Logo" width="520"/>
-
 ### 🧠 Brain Tumor Segmentation · Multi-Modal MRI · Immersive VR
 
 *An advanced VR platform for exploring brain tumor segmentation data in 3D*
