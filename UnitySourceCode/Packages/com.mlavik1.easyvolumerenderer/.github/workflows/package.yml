@@ -1,0 +1,26 @@
+name: Package
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: unityci/editor:ubuntu-2022.3.22f1-base-3
+    steps:
+    - uses: actions/checkout@v4
+      with: 
+        submodules: true
+    - name: Package
+      run: |
+        chmod a+x scripts/ci/activate-license.sh
+        ./scripts/ci/activate-license.sh
+        echo "Activation done. Packaging..."
+        python3 scripts/ExportUnityPackage.py /opt/unity/Editor/Unity -nodisplay
+      shell: bash
+      env:
+        UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_BASE64 }}
+    - uses: actions/upload-artifact@v4
+      with:
+        name: UnityVolumeRendering.unitypackage
+        path: UnityVolumeRendering.unitypackage

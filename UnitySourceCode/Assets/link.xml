@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  IL2CPP managed code stripping'e karsi:
+  - Nifti.NET (saf C#, UnityVolumeRendering.3rdParty asmdef'i icinde derlenir)
+    reflection'la Activator.CreateInstance uzerinden calistirilabilir (ImporterFactory).
+  - UnityVolumeRendering.Runtime: ImporterFactory tip adlariyla Activator.CreateInstance
+    yaptigi icin tum importer tipleri preserve edilmeli.
+  - openDicom: DICOM sozluk yuklemesi reflection/Resources uzerinden.
+-->
+<linker>
+    <assembly fullname="UnityVolumeRendering.3rdParty" preserve="all"/>
+    <assembly fullname="UnityVolumeRendering.Runtime" preserve="all"/>
+</linker>
